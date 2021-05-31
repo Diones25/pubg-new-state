@@ -1,0 +1,513 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+html{
+	scroll-behavior: smooth;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+
+*::-webkit-scrollbar {
+    width: 5.2px;
+}
+
+*::-webkit-scrollbar-button {
+    display: none;
+}
+*::-webkit-scrollbar-thumb {
+    background: #fff;
+}
+*::-webkit-scrollbar-track {
+    background-color: #5D5D5D;
+}
+*{
+    max-height: 100%;
+}
+body {
+	line-height: 1;
+	background-color: #0f131e;
+	width: 100%;
+	box-sizing: border-box;
+	overflow-x: hidden;
+	font-size: 16px;
+}
+@font-face {
+	font-family: Teko;
+	src: url('../fontes/Teko/Teko-Regular.ttf');
+}
+@font-face {
+	font-family: Agency;
+	src: url('../fontes/agency/AGENCYB.TTF');
+}
+@font-face {
+	font-family: Roboto_Condensed;
+	src: url('../fontes/Roboto_Condensed/RobotoCondensed-Regular.ttf');
+}
+@font-face {
+	font-family: Roboto;
+	src: url('../fontes/Roboto/Roboto-Regular.ttf');
+}
+a{
+	text-decoration: none;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/**************************************************/
+.container{
+	width: 100%;
+	max-width: 1280px;
+	margin: 0 auto;
+	
+}
+.bg{
+	background-image: url("../img/bg_top.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	max-width: 2560px;
+	width: 100%;
+	height: 1100px;
+}
+
+.header {
+	width: 100%;
+	position: fixed;
+	top: 0;
+	transition: .4s;
+	/*background-color: #666666;*/
+}
+.menu {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 20px 0;
+}
+.header nav.menu ul{
+	margin-right: 28px;
+	margin-left: 28px;
+	display: flex;
+}
+.header nav.menu ul li{
+	margin-right: 63px;
+	margin-left: 63px;
+	font-size: 1.43em;
+	font-family: Teko;
+} 
+
+@media (min-width: 840px) and (max-width: 1279px){
+	.header nav.menu ul li{
+		margin-right: 30px;
+		margin-left: 30px;
+	} 
+	
+}
+@media (min-width: 840px){
+	#menu-mobile{
+		display: none;
+	}
+}
+#mobile{
+	display: none;
+}
+@media (max-width: 839px){
+	.menu{
+		display: none;
+	}
+	.menu-mobile{
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+	nav .menu-mobile ul{
+		margin-top: 10px;
+		margin-bottom: 10px;
+	}
+	nav .menu-mobile ul li{
+		text-align: center;
+		margin-top: 4px;
+		margin-bottom: 4px;
+		padding: 15px;
+	}
+	nav .menu-mobile ul li a{
+		color: #fff;
+		display: block;
+	}
+	nav .menu-mobile ul li:hover{
+		background-color: #474e52;
+		
+	}
+	.header{
+		padding-bottom: 30px;
+	}
+	.icon_mobile{
+		margin-left: 30px;
+		margin-top: 30px;
+	}
+}
+
+.header nav.menu ul li a{
+	color: #fff;
+}
+.header nav.menu ul li a:hover{
+	color: #F2A900;
+}
+.header nav.menu ul li a.active{
+	color: #F2A900;
+}
+
+.header .icones_right span img{
+	margin-right: 28px;
+	margin-left: 28px;
+}
+.header .icones_right span:last-child{
+	margin-right: -24px;
+}
+.container .logo_center{
+	display: flex;
+	justify-content: center;
+	margin-top: -460px;
+}
+.container p{
+	color: #fff;
+	text-align: center;
+	font-family: Agency;
+	font-size: 2.37em;
+	font-weight: bold;
+}
+.container .group_buttons{
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	text-align: center;
+	margin-top: 43px;
+}
+.container .group_buttons a{
+	width: 264px;
+	height: 75px;
+	display: block;
+	line-height: 75px;
+	font-size: 1.37em;
+	font-family: Teko;
+	margin-right: 6px;
+	margin-left: 6px;
+}
+.container .group_buttons a.pre_venda{
+	background-color: #f2a900;
+	color: #000;
+}
+.container .group_buttons a.assista{
+	background-color: #fff;
+	color: #000;
+}
+.container .group_buttons a.assista span img{
+	width: 30px;
+	height: 30px;
+	position: relative;
+    top: 13%;
+	margin-right: 8px;
+}
+.container .group_buttons a.siga{
+	background-color: transparent;
+	color: #fff;
+	border: 2px solid #fff;
+	box-sizing: border-box;
+}
+
+.scroll_img{
+	display: flex;
+	justify-content: center;
+}
+.scroll_img img{
+	margin-top: 130px;
+}
+
+.bg2 .container{
+	background-image: url("../img/bg_benefits.jpg");
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	width: 100%;
+	height: 894px;
+	margin-top: 155px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+.bg2 .container .description{
+	font-family: Teko;
+	text-align: center;
+	margin-top: 50px;
+}
+.bg2 .container .description p.compre{
+	color: #D9D9D9;
+	font-size: 1.75em;
+}
+.bg2 .container .description p.bene{
+	color: #fff;
+	font-size: 5.25em;
+	margin-top: 20px;
+}
+.bg2 .container .description p.rece{
+	color: #D2DFDC;
+	font-size: 1.37em;
+	margin-top: 38px;
+}
+.bg2 .container .description p.data{
+	color: #F2A900;
+	font-size: 1.75em;
+	margin-top: 38px;
+}
+
+.bg2 .container .bg2_buttons{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin-bottom: 140px;
+}
+.bg2 .container .bg2_buttons .bg2_buttons_desc p{
+	text-align: center;
+	color: #7B838F;
+	font-size: 1em;
+	font-family: Roboto_Condensed;
+}
+.bg2 .container .bg2_buttons .bg2_buttons_desc p.descPRI{
+	margin-top: 30px;
+}
+
+.floating-box{
+	position: fixed;
+	right: 60px;
+	top: 50%;
+	margin-top: -130px;
+	width: 58px;
+	z-index: 500;
+}
+.floating-box li{
+	list-style: none;
+}
+.floating-box li a img{
+	margin: 10px 0 10px 0;
+}
+.floating-box li a .face:hover{
+	background-image: url('../img/Face2.png');
+	background-repeat: no-repeat;
+}
+.floating-box li a .twiter:hover{
+	background-image: url('../img/Twiter2.png');
+	background-repeat: no-repeat;
+}
+.floating-box li a .youtube:hover{
+	background-image: url('../img/Youtube2.png');
+	background-repeat: no-repeat;
+}
+.floating-box li a .instagram:hover{
+	background-image: url('../img/Instagram2.png');
+	background-repeat: no-repeat;
+}
+
+.bg3{
+	background-image: url("../img/bg_trailer.jpg");
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	width: 100%;
+	height: 1000px;
+}
+
+.bg3 .container .title_box p{
+	font-size: 5.25em;
+	color: #000;
+	font-family: Teko;
+	text-align: center;
+	padding: 126px 0 0 0;
+}
+.bg3 .container .box_video{
+	background-image: url('../img/thumb_video.jpg');
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	max-width: 1036px;
+	height: 100vh;
+	margin-top: 50px;
+	margin-left: auto;
+	margin-right: auto;
+	color: #fff;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+.bg3 .container .box_video .box_video_desc{
+	padding-left: 40px;
+}
+.bg3 .container .box_video .box_video_desc .desc_title{
+	font-size: 1.75em;
+	font-family: Roboto_Condensed;
+	font-weight: bold;
+	margin: 50px 0 18px 0;
+}
+.bg3 .container .box_video .box_video_desc .desc{
+	font-size: 1.25em;
+	font-family: Teko;
+}
+.bg3 .container .box_video .box_video_social{
+	padding-right: 30px;
+	margin-bottom: 30px;
+}
+.bg3 .container .box_video .box_video_social .label{
+	font-size: 1.37em;
+	font-family: Teko;
+	margin-right: 22px;
+}
+.bg3 .container .box_video .box_video_social .face{
+	margin-right: 15px;
+}
+.bg3 .container .box_video .box_video_social{
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+}
+.bg3 .container .box_video .box_icon_start{
+	display: flex;
+	justify-content: center;
+}
+
+.bg4{
+	background-image: url("../img/bg_sns.jpg");
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	width: 100%;
+	height: 1022px;
+}
+.bg4 .container p{
+	text-align: center;
+}
+.bg4 .container .oficial{
+	padding-top: 140px;
+	color: #fff;
+	font-size: 5.25em;
+	font-family: Teko;
+}
+.bg4 .container .canais{
+	color: #fff;
+	font-size: 5.25em;
+	font-family: Teko;
+}
+.bg4 .container .inscreva{
+	color: #D2DFDC;
+	font-family: Teko;
+	font-size: 1.37em;
+	margin-top: 15px;
+}
+.bg4 .container .seja{
+	color: #D2DFDC;
+	font-family: Teko;
+	font-size: 1.37em;
+	margin-top: 6px;
+}
+.bg4 .container .bloco_redes_sociais{
+	max-width: 670px;
+	width: 100%;
+	height: 112px;
+	background-color: rgba(0, 0, 0, 0.4);
+	margin: 0 auto;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.bg4 .container .bloco_redes_sociais.margin_top{
+	margin-top: 70px;
+	background-image: url('../img/box_bg1.png');
+	background-repeat: no-repeat;
+}
+.bg4 .container .bloco_redes_sociais.margin{
+	margin-top: 12px;
+}
+.bg4 .container .bloco_redes_sociais .bloco_social{
+	display: flex;
+	align-items: center;
+	color: #fff;
+	margin-left: 30px;
+}
+.bg4 .container .bloco_redes_sociais .bloco_social img{
+	margin-right: 20px;
+}
+.bg4 .container .bloco_redes_sociais .bloco_social p{
+	font-family: Roboto_Condensed;
+	font-size: 1.12em;
+	font-weight: bold;
+}
+.bg4 .container .bloco_redes_sociais a{
+	font-family: Teko;
+	font-size: 1.12em;
+	color: #000;
+	width: 186px;
+	height: 65px;
+	background-color: #f2a900;
+	text-align: center;
+	line-height: 65px;
+	margin-right: 30px;
+}
+
+.container_footer{
+	max-width: 1075px;
+	width: 100%;
+	margin: 0 auto;
+}
+footer{
+	background-color: #000000;
+}
+footer .container_footer{
+	display: flex;
+}
+footer .container_footer .footer_logo{
+	margin-right: 58px;
+	padding: 70px 0 70px 0;
+}
+footer .container_footer .footer_des{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+footer .container_footer .footer_des .footer_des_desc a{
+	color: #fff;
+	font-size: 1em;
+	font-family: Roboto;
+	margin-right: 30px;
+}
+footer .container_footer .footer_des .footer_des_copy{
+	margin-top: 20px;
+	color: #838383;
+	font-size: 0.87em;
+	font-family: Roboto;
+}
